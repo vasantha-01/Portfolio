@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        img{
+            width: 250;
+            height: 250;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"><br><br><br>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portofolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Vasantha lakshmi Ravuri</h1>
+            <h3>And i'm a <span id="profession">Frontend Developer</span></h3>
+            <p>Hi, I'm Vasantha lakshmi Ravuri, a passionate Frontend Developer with a keen eye for 
+                detail and a love for creating seamless user experiences.
+                I am continuously learning and experimenting with new technologies to 
+                stay up-to-date with industry trends and deliver cutting-edge solutions.</p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+            <a href="#"  class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="image3.jpeg" alt="">
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const professions = ["Frontend Developer","Traveller"];
+                const professionElement = document.getElementById('profession');
+                let index = 0;
+    
+                function changeProfession() {
+                    professionElement.textContent = professions[index];
+                    index = (index + 1) % professions.length;
+                }
+                setInterval(changeProfession, 2000);
+            });
+        </script>
+    </section>
+</body>
